@@ -6,3 +6,7 @@ body {
     rgba(253, 187, 45, 1) 100%
   );
 }
+
+p {
+  margin: 0 !important;
+}
