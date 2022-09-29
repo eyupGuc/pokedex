@@ -32,8 +32,8 @@ const pokeFetch = async (number) => {
   //   ></img>;
 };
 const numbers = () => {
-  for (let i = 100; i < 300; i++) {
-    console.log(i);
+  for (let i = 1; i < 300; i++) {
+    // console.log(i);
     pokeFetch(i);
   }
 };
@@ -41,15 +41,13 @@ numbers();
 
 const updateDOM = (poke) => {
   const rowDiv = document.querySelector(".row");
-  //   console.log(rowDiv);
 
   const type = poke.types[0].type.name;
   const color = colors[type];
+  const id = poke.id.toString().padStart(3, "0");
 
   rowDiv.innerHTML += `<div class="card text-center " style="width: 18rem; background:${color}">
-  <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/${
-    poke.id
-  }.png" class="card-img-top" alt="...">
+  <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/${id}.png" class="card-img-top" alt="...">
   <div class="card-body ">
     <h2 class="card-text ">${poke.name.toUpperCase()}</h2>
     <p> Weight: ${poke.weight} Kg</p>
