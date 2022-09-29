@@ -19,21 +19,11 @@ const colors = {
 const pokeFetch = async (number) => {
   const url = `https://pokeapi.co/api/v2/pokemon/${number}`;
   const res = await fetch(url);
-
   const data = await res.json();
-  //   console.log(data);
-  //   console.log(data.types[0].type.name);
-  //   console.log(data.id);
   updateDOM(data);
-
-  //   <img
-  //     src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
-  //     alt="Bulbasaur"
-  //   ></img>;
 };
 const numbers = () => {
   for (let i = 1; i < 300; i++) {
-    // console.log(i);
     pokeFetch(i);
   }
 };
