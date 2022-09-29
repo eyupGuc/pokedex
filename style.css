@@ -10,3 +10,12 @@ body {
 p {
   margin: 0 !important;
 }
+
+.card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.card {
+  transition: transform 0.7s;
+}
