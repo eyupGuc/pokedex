@@ -36,6 +36,8 @@ const updateDOM = (poke) => {
   const color = colors[type];
   const id = poke.id.toString().padStart(3, "0");
 
+  // console.log(id);
+
   rowDiv.innerHTML += `<div class="card text-center " style="width: 18rem; background:${color}">
   <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/${id}.png" class="card-img-top" alt="...">
   <div class="card-body ">
